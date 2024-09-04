@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: PlayerConfig
   m_EditorClassIdentifier: 
   <Speed>k__BackingField: 10
+  <CountLives>k__BackingField: 3
