@@ -2,5 +2,6 @@ using UnityEngine;
 
 public interface IInputHandler
 {
-    Vector2 GetInput();
+    Vector2 GetKeyboardInput();
+    Vector3 GetMousePosition();
 }

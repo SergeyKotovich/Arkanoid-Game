@@ -1,39 +1,39 @@
+using Ball;
+using EventMessages;
 using MessagePipe;
+using Player;
 using UnityEngine;
-using UnityEngine.UI;
 using VContainer;
 using VContainer.Unity;
 
 public class GameLifetimeScope : LifetimeScope
 {
-    [SerializeField] private Button _leftButton;
-    [SerializeField] private Button _rightButton;
+    [SerializeField] private Player.Player _player;
+    [SerializeField] private Boundary _boundary;
+    [SerializeField] private PlayerConfig _playerConfig;
+    [SerializeField] private Camera _mainCamera;
+    [SerializeField] private Ball.Ball _ball;
+    [SerializeField] private BallConfig _ballConfig;
+
     protected override void Configure(IContainerBuilder builder)
     {
-        RegisterInput(builder);
         RegisterMessagePipe(builder);
+        
+        builder.Register<InputHandler>(Lifetime.Singleton).AsImplementedInterfaces();
+        
+        builder.RegisterInstance(_player).AsImplementedInterfaces();
+        builder.RegisterInstance(_boundary);
+        builder.RegisterInstance(_playerConfig);
+        builder.RegisterInstance(_mainCamera);
+        builder.RegisterInstance(_ball);
+        builder.RegisterInstance(_ballConfig);
     }
 
     private void RegisterMessagePipe(IContainerBuilder builder)
     {
         var options = builder.RegisterMessagePipe();
-        builder.RegisterBuildCallback(c=>GlobalMessagePipe.SetProvider(c.AsServiceProvider()));
-    }
-    private void RegisterInput(IContainerBuilder builder)
-    {
-        if (Application.isMobilePlatform)
-        {
-            _leftButton.gameObject.SetActive(true);
-            _rightButton.gameObject.SetActive(true);
+        builder.RegisterBuildCallback(c => GlobalMessagePipe.SetProvider(c.AsServiceProvider()));
 
-            builder.RegisterInstance(_leftButton);
-            builder.RegisterInstance(_rightButton);
-
-            builder.Register<MobilInputHandler>(Lifetime.Singleton).AsImplementedInterfaces();
-        }
-        else
-        {
-            builder.Register<StandaloneInputHandler>(Lifetime.Singleton).AsImplementedInterfaces();
-        }
+        builder.RegisterMessageBroker<BallHitBottomMessage>(options);
     }
 }

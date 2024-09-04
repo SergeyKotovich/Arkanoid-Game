@@ -4,16 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="327a2c92-d40f-436c-b209-4d6ada073642" name="Changes" comment="added technologies to the project">
-      <change afterPath="$PROJECT_DIR$/App.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InputHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MobilInputHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StandaloneInputHandler.cs" afterDir="false" />
+    <list default="true" id="327a2c92-d40f-436c-b209-4d6ada073642" name="Changes" comment="Added InputHandler">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Ball/Ball.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Ball/BallConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Ball/BallConfig.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Boundary/BottomBoundary.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Boundary/BottomBoundary.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Boundary/Boundary.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Boundary/Boundary.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Boundary/BoundaryPointsProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Boundary/BoundaryPointsProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EventMessages/BallHitBottomMessage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EventMessages/BallHitBottomMessage.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GlobalConstants.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Input/InputHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/IPlayerPositionProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/IPlayerPositionProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MovementController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MovementController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerConfig.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Arkanoid-Test-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Arkanoid-Test-Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLifetimeScope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLifetimeScope.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/IInputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/IInputHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/MobilInputHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/MobilInputHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/StandaloneInputHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/StandaloneInputHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/InputHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ballBlue.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/ballBlue.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buttonDefault_bottom.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/buttonDefault_bottom.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buttonDefault_bottomleft.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/buttonDefault_bottomleft.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buttonDefault_bottomright.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/buttonDefault_bottomright.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buttonDefault_left.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/buttonDefault_left.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buttonDefault_mid.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/buttonDefault_mid.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buttonDefault_right.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/buttonDefault_right.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buttonDefault_top.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/buttonDefault_top.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buttonDefault_topleft.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/buttonDefault_topleft.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buttonDefault_topright.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/buttonDefault_topright.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buttonSelected_bottom.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/buttonSelected_bottom.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buttonSelected_bottomleft.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/buttonSelected_bottomleft.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buttonSelected_bottomright.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/buttonSelected_bottomright.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buttonSelected_left.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/buttonSelected_left.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buttonSelected_mid.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/buttonSelected_mid.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buttonSelected_right.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/buttonSelected_right.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buttonSelected_top.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/buttonSelected_top.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buttonSelected_topleft.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/buttonSelected_topleft.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buttonSelected_topright.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/buttonSelected_topright.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,13 +60,22 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/Downloads/SmallGame_TestWork-Develop/SmallGame_TestWork-Develop/Assets/Scripts/GameLifetimeScope.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InputHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MobilInputHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StandaloneInputHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/SmallGame_TestWork-Develop/SmallGame_TestWork-Develop/Assets/Scripts/Player/Boundary.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/SmallGame_TestWork-Develop/SmallGame_TestWork-Develop/Assets/Scripts/Player/BoundaryPointsProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/SmallGame_TestWork-Develop/SmallGame_TestWork-Develop/Assets/Scripts/Player/Player.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/SmallGame_TestWork-Develop/SmallGame_TestWork-Develop/Assets/Scripts/Player/PlayerEnemyDetecter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/SmallGame_TestWork-Develop/SmallGame_TestWork-Develop/Assets/Scripts/Player/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ball/Ball.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GlobalConstants.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@afaeff8204/Runtime/Internal/InstanceProviders/CollectionInstanceProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/GameLifetimeScope.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Input/IInputHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Input/MobilInputHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Input/StandaloneInputHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Player/PlayerMovementController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Player/TriggerHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/UI/BreakControllerView.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -91,7 +138,7 @@
       <option name="presentableId" value="Default" />
       <updated>1725297698144</updated>
       <workItem from="1725297730823" duration="3271000" />
-      <workItem from="1725356899296" duration="4489000" />
+      <workItem from="1725356899296" duration="34424000" />
     </task>
     <task id="LOCAL-00001" summary="added technologies to the project">
       <created>1725298037489</created>
@@ -100,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1725298037489</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added InputHandler">
+      <created>1725362416400</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1725362416400</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +177,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="added technologies to the project" />
-    <option name="LAST_COMMIT_MESSAGE" value="added technologies to the project" />
+    <MESSAGE value="Added InputHandler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added InputHandler" />
   </component>
 </project>
