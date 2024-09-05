@@ -15,13 +15,15 @@ namespace Ball
         private Rigidbody2D _rigidbody;
 
         private IPlayerPositionProvider _playerPositionProvider;
-        private IDisposable _ballHitBottomSubscriber;
-
+        private IDisposable _subscriptions;
 
         [Inject]
-        public void Construct(BallConfig ballConfig, IPlayerPositionProvider playerPositionProvider, ISubscriber<BallHitBottomMessage> ballHitBottomSubscriber)
+        public void Construct(BallConfig ballConfig, IPlayerPositionProvider playerPositionProvider,
+            ISubscriber<BallHitBottomMessage> ballHitBottomSubscriber, ISubscriber<GameOverMessage> gameOverSubscriber)
         {
-            _ballHitBottomSubscriber = ballHitBottomSubscriber.Subscribe(_ => SetBallPosition());
+            _subscriptions = DisposableBag.Create(ballHitBottomSubscriber.Subscribe(_ => ResetBall()),
+                gameOverSubscriber.Subscribe(_ => DeactivateBall()));
+            
             _playerPositionProvider = playerPositionProvider;
             _power = ballConfig.Power;
             _rigidbody = GetComponent<Rigidbody2D>();
@@ -36,10 +38,23 @@ namespace Ball
 
             SetBallPosition();
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 LaunchBall();
             }
+        }
+
+        private void ResetBall()
+        {
+            _isMoving = false;
+            _rigidbody.velocity = Vector2.zero;
+            _rigidbody.angularVelocity = 0f;
+
+            SetBallPosition();
+        }
+        private void DeactivateBall()
+        {
+           gameObject.SetActive(false);
         }
 
         private void SetBallPosition()
@@ -47,13 +62,17 @@ namespace Ball
             var playerPosition = _playerPositionProvider.PlayerPosition;
             playerPosition.y += _shift;
             transform.position = playerPosition;
-            _isMoving = false;
         }
 
         private void LaunchBall()
         {
-            _rigidbody.AddForce(Vector2.up * _power);
+            _rigidbody.AddRelativeForce(Vector2.up * _power);
             _isMoving = true;
+        }
+
+        private void OnDestroy()
+        {
+            _subscriptions.Dispose();
         }
     }
 }

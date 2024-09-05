@@ -1,5 +1,6 @@
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Player
 {
@@ -39,6 +40,12 @@ namespace Player
         {
             _isUsingKeyboard = !_isUsingKeyboard;
             _isUsingMouse = !_isUsingMouse;
+        }
+        
+        public void StopMovement()
+        {
+            _isUsingKeyboard = false;
+            _isUsingMouse = false;
         }
 
         private void MoveWithKeyboard(Vector2 direction)

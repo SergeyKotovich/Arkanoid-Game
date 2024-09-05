@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Player;
@@ -9,17 +10,25 @@ public class HealthControllerView : MonoBehaviour
     [SerializeField] private List<GameObject> _listLives;
 
     private IHealthHandler _healthController;
-
-    [Inject]
-    public void Construct(Player.Player player)
+    
+    public void Initialize(IHealthHandler healthController)
     {
-        _healthController = player.HealthController;
+        _healthController = healthController;
         _healthController.HealthChanged += OnHealthChanged;
     }
 
     private void OnHealthChanged()
     {
-        var live = _listLives.Last();
-        live.gameObject.SetActive(false);
+        var activeLife = _listLives.FirstOrDefault(life => life.activeSelf);
+        
+        if (activeLife != null)
+        {
+            activeLife.SetActive(false); 
+        }
+    }
+
+    private void OnDestroy()
+    {
+        _healthController.HealthChanged -= OnHealthChanged;
     }
 }

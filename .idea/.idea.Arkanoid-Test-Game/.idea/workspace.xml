@@ -4,16 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="327a2c92-d40f-436c-b209-4d6ada073642" name="Changes" comment="added PlayerMovement and ball">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/HealthController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/IHealthHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/IHealthHandler.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/HealthControllerView.cs" afterDir="false" />
+    <list default="true" id="327a2c92-d40f-436c-b209-4d6ada073642" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EventMessages/GameOverMessage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EventMessages/GameOverMessage.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/OutlineController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Arkanoid-Test-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Arkanoid-Test-Game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Casual UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Casual UI/Original Artwork.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Casual UI/Original Artwork/GUI.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Casual UI/Original Artwork/GUI.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Casual UI/Sprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Casual UI/Sprite/GUI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Casual UI/Sprite/GUI.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Casual UI/readme.rtf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Casual UI/readme.rtf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball/Ball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball/Ball.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Boundary/BottomBoundary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Boundary/BottomBoundary.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventMessages/BallHitBottomMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventMessages/BallHitBottomMessage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLifetimeScope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLifetimeScope.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/HealthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/HealthController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MovementController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/HealthControllerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/HealthControllerView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TileMaps/Map Palette.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TileMaps/Map Palette.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +45,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ball/Ball.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GlobalConstants.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/HealthController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/OutlineController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@afaeff8204/Runtime/Internal/InstanceProviders/CollectionInstanceProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/GameLifetimeScope.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Input/IInputHandler.cs" root0="SKIP_HIGHLIGHTING" />
@@ -37,6 +54,7 @@
     <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Input/StandaloneInputHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Player/PlayerMovementController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Player/PlayerTargetController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Player/TriggerHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/UI/BreakControllerView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/WavesController/WavesController.cs" root0="SKIP_HIGHLIGHTING" />
@@ -49,20 +67,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;rider.run.widget.enabled.cache&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "rider.run.widget.enabled.cache": "false",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Unity\2022.3.20f1\Editor\Unity.exe" />
@@ -82,10 +101,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="8544">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="8544" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -102,7 +121,8 @@
       <option name="presentableId" value="Default" />
       <updated>1725297698144</updated>
       <workItem from="1725297730823" duration="3271000" />
-      <workItem from="1725356899296" duration="40487000" />
+      <workItem from="1725356899296" duration="40634000" />
+      <workItem from="1725517874187" duration="14587000" />
     </task>
     <task id="LOCAL-00001" summary="added technologies to the project">
       <created>1725298037489</created>
@@ -125,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1725463347735</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added LivesController">
+      <created>1725469450516</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1725469450517</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +177,8 @@
     <MESSAGE value="added technologies to the project" />
     <MESSAGE value="Added InputHandler" />
     <MESSAGE value="added PlayerMovement and ball" />
-    <option name="LAST_COMMIT_MESSAGE" value="added PlayerMovement and ball" />
+    <MESSAGE value="added LivesController" />
+    <option name="LAST_COMMIT_MESSAGE" value="added LivesController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

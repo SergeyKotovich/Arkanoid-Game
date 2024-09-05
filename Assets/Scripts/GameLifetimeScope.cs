@@ -35,5 +35,7 @@ public class GameLifetimeScope : LifetimeScope
         builder.RegisterBuildCallback(c => GlobalMessagePipe.SetProvider(c.AsServiceProvider()));
 
         builder.RegisterMessageBroker<BallHitBottomMessage>(options);
+        builder.RegisterMessageBroker<GameOverMessage>(options);
     }
+    
 }

@@ -13,14 +13,26 @@ namespace Player
 
         [SerializeField] private MovementController _movementController;
         private HealthController _healthController;
+        private IDisposable _subscriptions;
 
         [Inject]
         public void Construct(IInputHandler inputHandler, Boundary boundary, PlayerConfig playerConfig,
-            ISubscriber<BallHitBottomMessage> ballHitBottomSubscriber)
+            ISubscriber<BallHitBottomMessage> ballHitBottomSubscriber, IPublisher<GameOverMessage> gameOverPublisher,
+            ISubscriber<GameOverMessage> gameOverSubscriber)
         {
             _movementController.Initialize(inputHandler, boundary.BoundaryPointsProvider, playerConfig.Speed);
-            _healthController = new HealthController(playerConfig.CountLives, ballHitBottomSubscriber);
+            _healthController = new HealthController(playerConfig.CountLives, ballHitBottomSubscriber, gameOverPublisher);
+            _subscriptions = gameOverSubscriber.Subscribe(_ => StopPlayer());
         }
-        
+
+        private void StopPlayer()
+        {
+            _movementController.StopMovement();
+        }
+
+        private void OnDestroy()
+        {
+            _subscriptions.Dispose();
+        }
     }
 }
