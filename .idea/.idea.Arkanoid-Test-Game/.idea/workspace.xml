@@ -4,31 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="327a2c92-d40f-436c-b209-4d6ada073642" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EventMessages/GameOverMessage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EventMessages/GameOverMessage.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/OutlineController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIController.cs" afterDir="false" />
+    <list default="true" id="327a2c92-d40f-436c-b209-4d6ada073642" name="Changes" comment="added UI">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Blocks/Block.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Blocks/BlockConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Blocks/BlockConfig.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Blocks/BlocksFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Blocks/BlocksFactory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Blocks/BlocksSpawner.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EventMessages/BlockDestroyed.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EventMessages/BlockDestroyed.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreController/IScore.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreController/IScore.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreController/ScoreController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ScoreView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ScoreView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Arkanoid-Test-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Arkanoid-Test-Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Casual UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Casual UI/Original Artwork.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Casual UI/Original Artwork/GUI.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Casual UI/Original Artwork/GUI.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Casual UI/Sprite.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Casual UI/Sprite/GUI.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Casual UI/Sprite/GUI.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Casual UI/readme.rtf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Casual UI/readme.rtf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Outline.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Outline.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball/Ball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball/Ball.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventMessages/BallHitBottomMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventMessages/BallHitBottomMessage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Block.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Block/Block.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Block/Block.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLifetimeScope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLifetimeScope.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/HealthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/HealthController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MovementController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/HealthControllerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/HealthControllerView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpriteOutline/Demo/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpriteOutline/Demo/Scenes/Demo1.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpriteOutline/Demo/Scenes/Demo1.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpriteOutline/Demo/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpriteOutline/Demo/Textures/Flower.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpriteOutline/Demo/Textures/Flower.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpriteOutline/Demo/Textures/tiles1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpriteOutline/Demo/Textures/tiles1.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TileMaps/Map Palette.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TileMaps/Map Palette.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,19 +54,30 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ball/Ball.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GlobalConstants.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/HealthController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreController/ScoreController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/OutlineController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@afaeff8204/Runtime/Internal/InstanceProviders/CollectionInstanceProvider.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/GameLifetimeScope.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Enemy/EnemiesSpawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Enemy/EnemyFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/EventMesages/MoneyCollectedMessage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/GameController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/GameLifetimeScope.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Input/IInputHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Input/MobilInputHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Input/StandaloneInputHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Player/Inventory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Player/PlayerMovementController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Player/PlayerTargetController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Player/TriggerHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/UI/BreakControllerView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Wallet/Coin.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Wallet/Coins.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Wallet/CoinsFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/Wallet/Wallet.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Survivor/Assets/Scripts/WavesController/WavesController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../TapMaster3D/Assets/Scripts/Temps/CubesSpawnerTemp.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -83,6 +103,14 @@
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Build\Arkanoid-Test-Game.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\wiska\RiderProjects\Arkanoid-Test-Game\Build" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Unity\2022.3.20f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\wiska\RiderProjects\Arkanoid-Test-Game -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
@@ -122,7 +150,7 @@
       <updated>1725297698144</updated>
       <workItem from="1725297730823" duration="3271000" />
       <workItem from="1725356899296" duration="40634000" />
-      <workItem from="1725517874187" duration="14587000" />
+      <workItem from="1725517874187" duration="31206000" />
     </task>
     <task id="LOCAL-00001" summary="added technologies to the project">
       <created>1725298037489</created>
@@ -152,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1725469450517</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added UI">
+      <created>1725547599747</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1725547599747</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +213,8 @@
     <MESSAGE value="Added InputHandler" />
     <MESSAGE value="added PlayerMovement and ball" />
     <MESSAGE value="added LivesController" />
-    <option name="LAST_COMMIT_MESSAGE" value="added LivesController" />
+    <MESSAGE value="added UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="added UI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
