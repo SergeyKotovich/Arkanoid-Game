@@ -13,20 +13,20 @@ public class Level : MonoBehaviour
     private IDisposable _subscriptions;
     private IPublisher<LevelFinished> _levelFinishedPublisher;
 
-    
+
     public void Initialize(IPublisher<BlockDestroyed> blockDestroyedPublisher,
-                          ISubscriber<BlockDestroyed> blockDestroyedSubscriber,
-                          IPublisher<LevelFinished> levelFinishedPublisher)
+        ISubscriber<BlockDestroyed> blockDestroyedSubscriber,
+        IPublisher<LevelFinished> levelFinishedPublisher, BlockConfig blockConfig,
+        IPublisher<ExtraLifeGained> extraLifeGainedPublisher)
     {
         _levelFinishedPublisher = levelFinishedPublisher;
-        
+
         foreach (var block in _blocks)
         {
-            block.Initialize(blockDestroyedPublisher);
+            block.Initialize(blockDestroyedPublisher, blockConfig, extraLifeGainedPublisher);
         }
-        
+
         _subscriptions = blockDestroyedSubscriber.Subscribe(_ => UpdateBlockCount());
-        
     }
 
     public void EnableLevel()
@@ -43,7 +43,7 @@ public class Level : MonoBehaviour
         }
 
         _countBlocks--;
-        
+
         if (_countBlocks <= 0)
         {
             _isActive = false;

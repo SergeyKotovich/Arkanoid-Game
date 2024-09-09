@@ -12,9 +12,11 @@ public class UIController : MonoBehaviour
 {
     [SerializeField] private HealthControllerView _healthControllerView;
     [SerializeField] private Button _controlChangeButton;
-    [SerializeField] private TextMeshProUGUI _gameOverMessage;
+    [SerializeField] private GameObject _gameOverScreen;
     [SerializeField] private Image _startScreen;
     [SerializeField] private ScoreView _scoreView;
+    [SerializeField] private GameObject _victoryScreen;
+    [SerializeField] private TextMeshProUGUI _currentLevelLabel;
 
     private IDisposable _subscriptions;
 
@@ -22,7 +24,7 @@ public class UIController : MonoBehaviour
     public void Construct(Player.Player player, ISubscriber<GameOverMessage> gameOverSubscriber, IScore scoreController)
     {
         _subscriptions = DisposableBag.Create(gameOverSubscriber.Subscribe(_ => DisableControlSwitchButton()),
-            gameOverSubscriber.Subscribe(_ => ShowMessage()));
+            gameOverSubscriber.Subscribe(_ => ShowDefeatScreen()));
         _healthControllerView.Initialize(player.HealthController);
         _scoreView.Initialize(scoreController);
     }
@@ -33,10 +35,20 @@ public class UIController : MonoBehaviour
         _startScreen.gameObject.SetActive(false);
     }
 
-    private void ShowMessage()
+    public void ShowVictoryScreen()
     {
-        _gameOverMessage.transform.DOLocalMoveX(1642, 5);
+        _victoryScreen.SetActive(true);
     }
+    public void ShowCurrentLevelMessage(int currentLevel)
+    {
+        _currentLevelLabel.text = currentLevel.ToString();
+    }
+
+    private void ShowDefeatScreen()
+    {
+       _gameOverScreen.SetActive(true);
+    }
+    
 
     private void DisableControlSwitchButton()
     {

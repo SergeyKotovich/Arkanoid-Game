@@ -50,6 +50,7 @@ public class GameLifetimeScope : LifetimeScope
         builder.RegisterMessageBroker<GameOverMessage>(options);
         builder.RegisterMessageBroker<BlockDestroyed>(options);
         builder.RegisterMessageBroker<LevelFinished>(options);
+        builder.RegisterMessageBroker<ExtraLifeGained>(options);
     }
     
 }

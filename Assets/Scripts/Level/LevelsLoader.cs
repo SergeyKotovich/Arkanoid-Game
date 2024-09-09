@@ -13,19 +13,26 @@ public class LevelsLoader : MonoBehaviour
     [Inject]
     public void Construct(List<Level> levels, IPublisher<BlockDestroyed> blockDestroyedPublisher,
         ISubscriber<BlockDestroyed> blockDestroyedSubscriber,
-        IPublisher<LevelFinished> levelFinishedPublisher)
+        IPublisher<LevelFinished> levelFinishedPublisher, BlockConfig blockConfig,
+        IPublisher<ExtraLifeGained> extraLifeGainedPublisher)
     {
         _levels = levels;
         foreach (var level in _levels)
         {
-            level.Initialize(blockDestroyedPublisher,blockDestroyedSubscriber,levelFinishedPublisher);
+            level.Initialize(blockDestroyedPublisher, blockDestroyedSubscriber, levelFinishedPublisher, blockConfig,
+                extraLifeGainedPublisher);
         }
     }
+
     public async UniTask LoadLevel(int indexLevel)
     {
-       await UniTask.Delay(_delay);
-       _levels[indexLevel].gameObject.SetActive(true);
-       _levels[indexLevel].EnableLevel();
+        await UniTask.Delay(_delay);
+        _levels[indexLevel].gameObject.SetActive(true);
+        _levels[indexLevel].EnableLevel();
     }
-    
+
+    public int GetCountLevels()
+    {
+        return _levels.Count;
+    }
 }

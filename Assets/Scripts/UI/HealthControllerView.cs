@@ -14,10 +14,21 @@ public class HealthControllerView : MonoBehaviour
     public void Initialize(IHealthHandler healthController)
     {
         _healthController = healthController;
-        _healthController.HealthChanged += OnHealthChanged;
+        _healthController.HealthDecreased += OnHealthDecreased;
+        _healthController.LifeGained += OnLifeGained;
     }
 
-    private void OnHealthChanged()
+    private void OnLifeGained()
+    {
+        var inactiveLife = _listLives.FirstOrDefault(life => !life.activeSelf);
+
+        if (inactiveLife != null)
+        {
+            inactiveLife.SetActive(true);
+        }
+    }
+
+    private void OnHealthDecreased()
     {
         var activeLife = _listLives.FirstOrDefault(life => life.activeSelf);
         
@@ -29,6 +40,7 @@ public class HealthControllerView : MonoBehaviour
 
     private void OnDestroy()
     {
-        _healthController.HealthChanged -= OnHealthChanged;
+        _healthController.HealthDecreased -= OnHealthDecreased;
+        _healthController.LifeGained -= OnLifeGained;
     }
 }

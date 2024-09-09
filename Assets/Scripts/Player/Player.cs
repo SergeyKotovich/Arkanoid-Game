@@ -18,10 +18,10 @@ namespace Player
         [Inject]
         public void Construct(IInputHandler inputHandler, Boundary boundary, PlayerConfig playerConfig,
             ISubscriber<BallHitBottomMessage> ballHitBottomSubscriber, IPublisher<GameOverMessage> gameOverPublisher,
-            ISubscriber<GameOverMessage> gameOverSubscriber)
+            ISubscriber<GameOverMessage> gameOverSubscriber, ISubscriber<ExtraLifeGained> extraLifeGainedSubscriber)
         {
             _movementController.Initialize(inputHandler, boundary.BoundaryPointsProvider, playerConfig.Speed);
-            _healthController = new HealthController(playerConfig.CountLives, ballHitBottomSubscriber, gameOverPublisher);
+            _healthController = new HealthController(playerConfig.CountLives, ballHitBottomSubscriber, gameOverPublisher, extraLifeGainedSubscriber);
             _subscriptions = gameOverSubscriber.Subscribe(_ => StopPlayer());
         }
 

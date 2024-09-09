@@ -40,7 +40,7 @@ namespace Ball
             {
                 return;
             }
-
+            
             SetBallPosition();
 
             if (Input.GetMouseButtonDown(1))
@@ -48,7 +48,7 @@ namespace Ball
                 LaunchBall();
             }
         }
-
+        
         private void ResetBall()
         {
             _isMoving = false;

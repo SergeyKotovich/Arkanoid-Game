@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <BlockPrefab>k__BackingField: {fileID: 3926273914118849277, guid: c5d252e9e4d43904e90a38f065827419, type: 3}
   <AmountPoints>k__BackingField: 10
+  <ExtraLifePrefab>k__BackingField: {fileID: -4727152882744635227, guid: 112c347f3446f3140822563a73b3d73f, type: 3}

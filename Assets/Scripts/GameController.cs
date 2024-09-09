@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using EventMessages;
 using MessagePipe;
@@ -7,11 +6,12 @@ using VContainer.Unity;
 
 public class GameController : IStartable, IDisposable
 {
-    private UIController _uiController;
+    private readonly UIController _uiController;
     private readonly LevelsLoader _levelsLoader;
     private int _currentLevel;
     private readonly IDisposable _subscriptions;
-    
+    private int _countLevels;
+
     public GameController(UIController uiController, LevelsLoader levelsLoader,
         ISubscriber<LevelFinished> levelFinishedSubscriber)
     {
@@ -27,8 +27,22 @@ public class GameController : IStartable, IDisposable
 
     private async UniTask LoadNewLevel()
     {
-       await _levelsLoader.LoadLevel(_currentLevel);
-        _currentLevel++;
+        _countLevels = _levelsLoader.GetCountLevels();
+        if (_currentLevel < _countLevels)
+        {
+            await _levelsLoader.LoadLevel(_currentLevel);
+            _uiController.ShowCurrentLevelMessage(_currentLevel + 1);
+            _currentLevel++;
+        }
+        else
+        {
+            GameFinished();
+        }
+    }
+
+    private void GameFinished()
+    {
+        _uiController.ShowVictoryScreen();
     }
 
     public void Dispose()
