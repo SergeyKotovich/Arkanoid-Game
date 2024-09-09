@@ -8,8 +8,9 @@ namespace Ball
 {
     public class Ball : MonoBehaviour
     {
+        [SerializeField] private BallCollisionHandler _ballCollisionHandler;
         private float _power;
-        private const float _shift = 0.35f;
+        private float _shift;
         private bool _isMoving;
 
         private Rigidbody2D _rigidbody;
@@ -19,14 +20,18 @@ namespace Ball
 
         [Inject]
         public void Construct(BallConfig ballConfig, IPlayerPositionProvider playerPositionProvider,
-            ISubscriber<BallHitBottomMessage> ballHitBottomSubscriber, ISubscriber<GameOverMessage> gameOverSubscriber)
+            ISubscriber<BallHitBottomMessage> ballHitBottomSubscriber, ISubscriber<GameOverMessage> gameOverSubscriber,
+            ISubscriber<LevelFinished> levelFinishedSubscriber)
         {
             _subscriptions = DisposableBag.Create(ballHitBottomSubscriber.Subscribe(_ => ResetBall()),
-                gameOverSubscriber.Subscribe(_ => DeactivateBall()));
-            
+                gameOverSubscriber.Subscribe(_ => DeactivateBall()),
+                levelFinishedSubscriber.Subscribe(_ => ResetBall()));
+
             _playerPositionProvider = playerPositionProvider;
             _power = ballConfig.Power;
+            _shift = ballConfig.Shift;
             _rigidbody = GetComponent<Rigidbody2D>();
+            _ballCollisionHandler.Initialize(_power);
         }
 
         private void LateUpdate()
@@ -38,7 +43,7 @@ namespace Ball
 
             SetBallPosition();
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetMouseButtonDown(1))
             {
                 LaunchBall();
             }
@@ -52,9 +57,10 @@ namespace Ball
 
             SetBallPosition();
         }
+
         private void DeactivateBall()
         {
-           gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
 
         private void SetBallPosition()
@@ -66,7 +72,7 @@ namespace Ball
 
         private void LaunchBall()
         {
-            _rigidbody.AddRelativeForce(Vector2.up * _power);
+            _rigidbody.velocity = Vector2.up * _power;
             _isMoving = true;
         }
 

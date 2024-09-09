@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a05bcb516b4181a83f9e3585998058, type: 3}
   m_Name: BallConfig
   m_EditorClassIdentifier: 
-  <Power>k__BackingField: 500
+  <Power>k__BackingField: 8
+  <Shift>k__BackingField: 0.35

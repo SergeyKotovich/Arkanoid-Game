@@ -6,5 +6,6 @@ namespace Ball
     public class BallConfig : ScriptableObject
     {
         [field: SerializeField] public float Power { get; private set; }
+        [field: SerializeField] public float Shift { get; private set; }
     }
 }

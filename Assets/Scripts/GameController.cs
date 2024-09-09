@@ -1,18 +1,38 @@
+using System;
+using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
+using EventMessages;
+using MessagePipe;
 using VContainer.Unity;
 
-public class GameController : IStartable
+public class GameController : IStartable, IDisposable
 {
     private UIController _uiController;
-    private readonly BlocksSpawner _blocksSpawner;
-
-    public GameController(UIController uiController, BlocksSpawner blocksSpawner)
+    private readonly LevelsLoader _levelsLoader;
+    private int _currentLevel;
+    private readonly IDisposable _subscriptions;
+    
+    public GameController(UIController uiController, LevelsLoader levelsLoader,
+        ISubscriber<LevelFinished> levelFinishedSubscriber)
     {
-        _blocksSpawner = blocksSpawner;
+        _levelsLoader = levelsLoader;
         _uiController = uiController;
+        _subscriptions = levelFinishedSubscriber.Subscribe(_ => LoadNewLevel().Forget());
     }
 
     public void Start()
     {
-        _blocksSpawner.StartSpawn();
+        LoadNewLevel().Forget();
+    }
+
+    private async UniTask LoadNewLevel()
+    {
+       await _levelsLoader.LoadLevel(_currentLevel);
+        _currentLevel++;
+    }
+
+    public void Dispose()
+    {
+        _subscriptions.Dispose();
     }
 }

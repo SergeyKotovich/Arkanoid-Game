@@ -1,9 +1,9 @@
+using System.Collections.Generic;
 using Ball;
 using EventMessages;
 using MessagePipe;
 using Player;
 using UnityEngine;
-using UnityEngine.UI;
 using VContainer;
 using VContainer.Unity;
 
@@ -17,14 +17,14 @@ public class GameLifetimeScope : LifetimeScope
     [SerializeField] private BallConfig _ballConfig;
     [SerializeField] private BlockConfig _blockConfig;
     [SerializeField] private UIController _uiController;
-    [SerializeField] private BlocksSpawner _blocksSpawner;
+    [SerializeField] private LevelsLoader _levelsLoader;
+    [SerializeField] private List<Level> _listLevels;
 
     protected override void Configure(IContainerBuilder builder)
     {
         RegisterMessagePipe(builder);
         
         builder.Register<InputHandler>(Lifetime.Singleton).AsImplementedInterfaces();
-        builder.Register<BlocksFactory>(Lifetime.Singleton);
         builder.Register<ScoreController>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
         
         builder.RegisterInstance(_player).AsImplementedInterfaces();
@@ -35,7 +35,8 @@ public class GameLifetimeScope : LifetimeScope
         builder.RegisterInstance(_ballConfig);
         builder.RegisterInstance(_blockConfig);
         builder.RegisterInstance(_uiController);
-        builder.RegisterInstance(_blocksSpawner);
+        builder.RegisterInstance(_levelsLoader);
+        builder.RegisterInstance(_listLevels);
 
         builder.RegisterEntryPoint<GameController>();
     }
@@ -48,6 +49,7 @@ public class GameLifetimeScope : LifetimeScope
         builder.RegisterMessageBroker<BallHitBottomMessage>(options);
         builder.RegisterMessageBroker<GameOverMessage>(options);
         builder.RegisterMessageBroker<BlockDestroyed>(options);
+        builder.RegisterMessageBroker<LevelFinished>(options);
     }
     
 }
