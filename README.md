@@ -7,8 +7,8 @@ This is a 2D arcade game. The player controls a paddle to bounce a ball, which b
 
 ### Technologies and Design Patterns Used
 * VContainer: Dependency Injection framework for Unity.
-* Message Pipe: messaging system for Unity that enables event handling with the publish-subscribe pattern.
-* UniTask : efficient async/await support for Unity, optimizing asynchronous operations for game development.
+* Message Pipe: Messaging system for Unity that enables event handling with the publish-subscribe pattern.
+* UniTask : Efficient async/await support for Unity, optimizing asynchronous operations for game development.
 
 ### Character Logic
 * The platform is located at the bottom of the screen and is controlled by the player using the AD keys or the mouse.
