@@ -1,4 +1,3 @@
-using System;
 using EventMessages;
 using MessagePipe;
 using UnityEngine;

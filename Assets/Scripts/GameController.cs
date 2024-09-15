@@ -31,8 +31,8 @@ public class GameController : IStartable, IDisposable
         if (_currentLevel < _countLevels)
         {
             await _levelsLoader.LoadLevel(_currentLevel);
-            _uiController.ShowCurrentLevelMessage(_currentLevel + 1);
-            _currentLevel++;
+            _uiController.ShowCurrentLevelMessage(++_currentLevel);
+           
         }
         else
         {

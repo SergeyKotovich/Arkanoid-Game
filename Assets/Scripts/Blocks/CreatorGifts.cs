@@ -1,4 +1,3 @@
-using System.Linq;
 using EventMessages;
 using MessagePipe;
 using UnityEngine;
@@ -15,8 +14,13 @@ public class CreatorGifts : MonoBehaviour
     }
     public void CreateGift()
     {
-        var extraLife = Instantiate(_extraLifePrefab, transform.position, Quaternion.identity);
-        extraLife.Initialize(_extraLifeGainedPublisher);
+        var randomChance = Random.Range(1, 10);
+        if (randomChance == 1)
+        {
+            var extraLife = Instantiate(_extraLifePrefab, transform.position, Quaternion.identity);
+            extraLife.Initialize(_extraLifeGainedPublisher);
+        }
+        
     }
     
 }
