@@ -1,4 +1,4 @@
-# Test Game Arkanoid
+# Game Arkanoid
 
 https://github.com/user-attachments/assets/dacfa755-e16f-4a2b-9b63-427c88e71598
 
